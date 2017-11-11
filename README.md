@@ -2,7 +2,7 @@
 
 CatHttp是一款轻量级的android网络访问框架。调用方式参考了OkHttp框架，内部使用的是HttpUrlConnection。想要使用OkHttp的同学请点传送门：[Okhttp](https://github.com/square/okhttp)
 
-##基本功能
+## 基本功能
 
  - 支持 get、post、put、delete 等请求方式
  - 同步和异步的方式来构建请求
@@ -10,7 +10,7 @@ CatHttp是一款轻量级的android网络访问框架。调用方式参考了OkH
  - 单/多  文件上传（可同时携带参数）
 
 
-##同步请求
+## 同步请求
 
 ```
 public void syncClick(View view) {
@@ -27,7 +27,7 @@ public void syncClick(View view) {
     }
 ```
 
-##异步请求
+## 异步请求
 
 ```
 public void asyncClick(View view) {
@@ -72,7 +72,7 @@ public void getClick(View view) {
     }
 ```
 
-##POST提交表单
+## POST提交表单
 
 ```
 public void postClick(View view) {
@@ -95,7 +95,7 @@ public void postClick(View view) {
     }
 ```
 
-##文件+参数提交
+## 文件+参数提交
 
 ```
 public void multipartClick(View view) {
@@ -128,6 +128,6 @@ public void multipartClick(View view) {
         
     }
 ```
-#文件格式
+# 文件格式
 
 对于文件格式CatHttp目前没有进行处理，使用过程中实际传入的文件和对应格式请参照  [Content Type  文件格式对照表](http://tool.oschina.net/commons/)。
