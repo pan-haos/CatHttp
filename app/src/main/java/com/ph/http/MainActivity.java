@@ -60,10 +60,8 @@ public class MainActivity extends AppCompatActivity {
      * 同步，默认是get请求
      *
      * @param view
-     * @throws ExecutionException
-     * @throws InterruptedException
      */
-    public void syncClick(View view) throws ExecutionException, InterruptedException {
+    public void syncClick(View view) {
         Request request = new Request.Builder()
                 .url("http://192.168.31.34:8080/API/upkeep")
                 .build();
@@ -113,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
      *
      * @param view
      */
-    public void getClick(View view) throws ExecutionException, InterruptedException {
+    public void getClick(View view) {
         Request request = new Request.Builder()
                 .url("http://192.168.31.34:8080/API/upkeep?username=qq&pwd=123")
                 .get()
@@ -132,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
      *
      * @param view
      */
-    public void postClick(View view) throws ExecutionException, InterruptedException {
+    public void postClick(View view) {
         FormBody body = new FormBody.Builder()
                 .add("username", "浩哥")
                 .add("pwd", "abc")
@@ -166,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
      * @throws ExecutionException
      * @throws InterruptedException
      */
-    public void multipartClick(View view) throws ExecutionException, InterruptedException {
+    public void multipartClick(View view) {
 
         String path = Environment.getExternalStorageDirectory().getAbsolutePath();
 

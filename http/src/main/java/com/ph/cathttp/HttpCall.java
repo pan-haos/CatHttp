@@ -25,16 +25,23 @@ public class HttpCall implements Call {
 
 
     @Override
-    public Response execute() throws ExecutionException, InterruptedException {
+    public Response execute() {
         Callable<Response> task = new SyncTask();
+        Response response;
         try {
-            Response response = HttpThreadPool.getInstance().submit(task);
+            response = HttpThreadPool.getInstance().submit(task);
             return response;
         } catch (ExecutionException e) {
-            throw e;
+            e.printStackTrace();
         } catch (InterruptedException e) {
-            throw e;
+            e.printStackTrace();
         }
+        return new Response.Builder()
+                .code(400)
+                .message("线程异常中断")
+                .body(new ResponseBody(null))
+                .build();
+
     }
 
     @Override

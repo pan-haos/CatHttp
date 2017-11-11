@@ -27,5 +27,4 @@ public class ResponseBody {
         }
         return "";
     }
-
 }

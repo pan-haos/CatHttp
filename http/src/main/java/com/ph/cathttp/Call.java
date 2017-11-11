@@ -1,7 +1,5 @@
 package com.ph.cathttp;
 
-import java.util.concurrent.ExecutionException;
-
 /**
  * 作者：潘浩
  * 项目：CatHttp
@@ -15,7 +13,7 @@ public interface Call {
      *
      * @return response
      */
-    Response execute() throws ExecutionException, InterruptedException;
+    Response execute();
 
     /**
      * 异步执行
