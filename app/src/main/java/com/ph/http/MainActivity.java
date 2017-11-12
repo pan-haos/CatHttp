@@ -103,7 +103,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
     }
 
     /**
@@ -135,7 +134,6 @@ public class MainActivity extends AppCompatActivity {
                 .add("username", "浩哥")
                 .add("pwd", "abc")
                 .build();
-
 
         Request request = new Request.Builder()
                 .url("http://192.168.31.34:8080/API/upkeep")
@@ -186,10 +184,11 @@ public class MainActivity extends AppCompatActivity {
                 .post(body)
                 .build();
 
-
         Response response = client.newCall(request).execute();
+
         if (response != null && response.code() == 200) {
             Logger.e("msg== " + response.body().string());
         }
+
     }
 }
