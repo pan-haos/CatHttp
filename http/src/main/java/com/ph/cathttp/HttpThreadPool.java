@@ -55,7 +55,7 @@ public class HttpThreadPool {
     }
 
     private HttpThreadPool() {
-        executor = new ThreadPoolExecutor(CORE_POOL_SIZE, CORE_POOL_SIZE, LIVE_TIME + 1, TimeUnit.SECONDS, new ArrayBlockingQueue<Runnable>(4), rejectHandler);
+        executor = new ThreadPoolExecutor(CORE_POOL_SIZE, CORE_POOL_SIZE + 1, LIVE_TIME, TimeUnit.SECONDS, new ArrayBlockingQueue<Runnable>(4), rejectHandler);
         executor.execute(runnable);
     }
 

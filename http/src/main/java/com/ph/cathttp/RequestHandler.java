@@ -28,6 +28,7 @@ public class RequestHandler implements IRequestHandler {
 
         //解析返回内容
         int responseCode = connection.getResponseCode();
+
         if (responseCode >= 200 && responseCode < 400) {
             byte[] bytes = new byte[1024];
             int len;

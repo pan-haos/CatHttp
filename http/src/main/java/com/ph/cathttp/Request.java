@@ -37,12 +37,6 @@ public class Request {
             this.heads = new ArrayMap<>();
         }
 
-        Builder(Request request) {
-            this.method = request.method;
-            this.url = request.url;
-        }
-
-
         public Builder url(String url) {
             this.url = url;
             return this;

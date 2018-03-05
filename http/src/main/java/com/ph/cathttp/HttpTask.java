@@ -27,7 +27,6 @@ public class HttpTask implements Runnable {
             handler.handlerSuccess(callback, response);
         } catch (IOException e) {
             handler.handFail(callback, call.request, e);
-            e.printStackTrace();
         }
     }
 

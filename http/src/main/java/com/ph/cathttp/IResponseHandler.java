@@ -72,7 +72,6 @@ public interface IResponseHandler {
             HANDLER.post(runnable);
         }
 
-
     };
 
 }

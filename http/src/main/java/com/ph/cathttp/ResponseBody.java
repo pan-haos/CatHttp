@@ -23,8 +23,7 @@ public class ResponseBody {
         try {
             return new String(bytes(), "UTF-8");
         } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
+            throw new IllegalStateException("byte can't change to utf-8");
         }
-        return "";
     }
 }
